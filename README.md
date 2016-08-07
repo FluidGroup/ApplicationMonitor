@@ -5,11 +5,53 @@
 [![License](https://img.shields.io/cocoapods/l/ApplicationMonitor.svg?style=flat)](http://cocoapods.org/pods/ApplicationMonitor)
 [![Platform](https://img.shields.io/cocoapods/p/ApplicationMonitor.svg?style=flat)](http://cocoapods.org/pods/ApplicationMonitor)
 
-## Example
+## Setup
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+**Define receive report object**
+
+```swift
+public protocol ViewControllerMonitorReportProtocol {
+
+    func viewDidLoad(viewController: UIViewController)
+    func viewWillAppear(viewController: UIViewController)
+    func viewDidAppear(viewController: UIViewController)
+    func viewWillDisappear(viewController: UIViewController)
+    func viewDidDisappear(viewController: UIViewController)
+}
+
+struct Report: ViewControllerMonitorReportProtocol {
+
+    func viewDidLoad(viewController: UIViewController) {
+        print("[ViewDidLoad] : \(viewController)")
+    }
+
+    func viewWillAppear(viewController: UIViewController) {
+        print("[ViewWillAppear] : \(viewController)")
+    }
+
+    func viewDidAppear(viewController: UIViewController) {
+        print("[ViewDidAppear] : \(viewController)")
+    }
+
+    func viewWillDisappear(viewController: UIViewController) {
+        print("[ViewWillDisappear] : \(viewController)")
+    }
+
+    func viewDidDisappear(viewController: UIViewController) {
+        print("[ViewDidDisappear] : \(viewController)")
+    }
+}
+```
+
+**Set**
+
+```swift
+ApplicationMonitor.setViewControllerMonitorReport(Report())
+```
 
 ## Requirements
+
+iOS8.0+
 
 ## Installation
 

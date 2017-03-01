@@ -51,6 +51,7 @@ extension UIView {
 
   @objc fileprivate func me_muukii_setNeedsLayout() {
     ApplicationMonitor.viewMonitorReport?.setNeedsLayout(on: self)
+    self.me_muukii_setNeedsLayout()
   }
 
 //  @objc fileprivate func me_muukii_setNeedsDisplay() {

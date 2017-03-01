@@ -56,22 +56,27 @@ extension UIViewController {
 
   @objc fileprivate func me_muukii_transition_monitor_viewDidLoad() {
     ApplicationMonitor.viewControllerMonitorReport?.viewDidLoad(on: self)
+    self.me_muukii_transition_monitor_viewDidLoad()
   }
 
   @objc fileprivate func me_muukii_transition_monitor_viewWillAppear(_ animated: Bool) {
     ApplicationMonitor.viewControllerMonitorReport?.viewWillAppear(on: self)
+    self.me_muukii_transition_monitor_viewWillAppear(animated)
   }
 
   @objc fileprivate func me_muukii_transition_monitor_viewDidAppear(_ animated: Bool) {
     ApplicationMonitor.viewControllerMonitorReport?.viewDidAppear(on: self)
+    self.me_muukii_transition_monitor_viewDidAppear(animated)
   }
 
   @objc fileprivate func me_muukii_transition_monitor_viewWillDisappear(_ animated: Bool) {
     ApplicationMonitor.viewControllerMonitorReport?.viewWillDisappear(on: self)
+    self.me_muukii_transition_monitor_viewWillDisappear(animated)
   }
 
   @objc fileprivate func me_muukii_transition_monitor_viewDidDisappear(_ animated: Bool) {
     ApplicationMonitor.viewControllerMonitorReport?.viewDidDisappear(on: self)
+    self.me_muukii_transition_monitor_viewDidDisappear(animated)
   }
 
   @nonobjc

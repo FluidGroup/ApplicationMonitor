@@ -23,21 +23,32 @@
 import UIKit
 
 public protocol ViewControllerMonitorReportProtocol {
-    
-    func viewDidLoad(_ viewController: UIViewController)
-    func viewWillAppear(_ viewController: UIViewController)
-    func viewDidAppear(_ viewController: UIViewController)
-    func viewWillDisappear(_ viewController: UIViewController)
-    func viewDidDisappear(_ viewController: UIViewController)
+
+  func viewDidLoad(on viewController: UIViewController)
+  func viewWillAppear(on viewController: UIViewController)
+  func viewDidAppear(on viewController: UIViewController)
+  func viewWillDisappear(on viewController: UIViewController)
+  func viewDidDisappear(on viewController: UIViewController)
 }
+
+public protocol ViewMonitorReportProtocol {
+
+//  func setNeedsDisplay(on: UIView)
+//  func setNeedsDisplay(in rect: CGRect, on: UIView)
+  func setNeedsLayout(on: UIView)
+}
+
 
 public enum ApplicationMonitor {
-    
-    public static func setViewControllerMonitorReport(_ object: ViewControllerMonitorReportProtocol) {
-        viewControllerMonitorReport = object
-    }
-    
-    internal static var viewControllerMonitorReport: ViewControllerMonitorReportProtocol?
+
+  public static func setViewControllerMonitorReport(_ object: ViewControllerMonitorReportProtocol) {
+    viewControllerMonitorReport = object
+  }
+
+  public static func setViewMonitorReport(_ object: ViewMonitorReportProtocol) {
+    viewMonitorReport = object
+  }
+
+  internal static var viewControllerMonitorReport: ViewControllerMonitorReportProtocol?
+  internal static var viewMonitorReport: ViewMonitorReportProtocol?
 }
-
-

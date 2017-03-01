@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B7504261E6675BA0000D20F /* UIView+ApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7504251E6675BA0000D20F /* UIView+ApplicationMonitor.swift */; };
 		4BDA995E1D831EEA00E5C775 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 4BDA995B1D831EEA00E5C775 /* .gitkeep */; };
 		4BDA995F1D831EEA00E5C775 /* ApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDA995C1D831EEA00E5C775 /* ApplicationMonitor.swift */; };
 		4BDA99601D831EEA00E5C775 /* UIViewController+ApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDA995D1D831EEA00E5C775 /* UIViewController+ApplicationMonitor.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B7504251E6675BA0000D20F /* UIView+ApplicationMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ApplicationMonitor.swift"; sourceTree = "<group>"; };
 		4BCFD31C1D831EC2000F0D19 /* ApplicationMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApplicationMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDA995B1D831EEA00E5C775 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		4BDA995C1D831EEA00E5C775 /* ApplicationMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationMonitor.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				4BDA995B1D831EEA00E5C775 /* .gitkeep */,
 				4BDA995C1D831EEA00E5C775 /* ApplicationMonitor.swift */,
 				4BDA995D1D831EEA00E5C775 /* UIViewController+ApplicationMonitor.swift */,
+				4B7504251E6675BA0000D20F /* UIView+ApplicationMonitor.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B7504261E6675BA0000D20F /* UIView+ApplicationMonitor.swift in Sources */,
 				4BDA99601D831EEA00E5C775 /* UIViewController+ApplicationMonitor.swift in Sources */,
 				4BDA995F1D831EEA00E5C775 /* ApplicationMonitor.swift in Sources */,
 			);

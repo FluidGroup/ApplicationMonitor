@@ -36,8 +36,8 @@ public protocol ViewMonitorReportProtocol {
 //  func setNeedsDisplay(on: UIView)
 //  func setNeedsDisplay(in rect: CGRect, on: UIView)
   func setNeedsLayout(on: UIView)
-  func touchesEnded(on: UIView, _ touches: Set<UITouch>, with event: UIEvent?)
 }
+
 
 public enum ApplicationMonitor {
 

@@ -24,7 +24,7 @@ import UIKit
 
 extension UIViewController {
 
-  override open class func initialize() {
+  override open static func initialize() {
     if !didUIViewControllerInitialize {
       replaceMethods()
       didUIViewControllerInitialize = true

@@ -24,7 +24,7 @@ import UIKit
 
 extension UIView {
 
-  override open class func initialize() {
+  override open static func initialize() {
     if !didUIViewControllerInitialize {
       replaceMethods()
       didUIViewControllerInitialize = true
@@ -36,11 +36,6 @@ extension UIView {
     method_exchangeImplementations(
       class_getInstanceMethod(self, #selector(setNeedsLayout)),
       class_getInstanceMethod(self, #selector(me_muukii_setNeedsLayout))
-    )
-
-    method_exchangeImplementations(
-      class_getInstanceMethod(self, #selector(touchesEnded(_:with:))),
-      class_getInstanceMethod(self, #selector(me_muukii_touchesEnded(_:with:)))
     )
 
 //    method_exchangeImplementations(
@@ -57,11 +52,6 @@ extension UIView {
   @objc fileprivate func me_muukii_setNeedsLayout() {
     ApplicationMonitor.viewMonitorReport?.setNeedsLayout(on: self)
     self.me_muukii_setNeedsLayout()
-  }
-
-  @objc fileprivate func me_muukii_touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    ApplicationMonitor.viewMonitorReport?.touchesEnded(on: self, touches, with: event)
-    self.me_muukii_touchesEnded(touches, with: event)
   }
 
 //  @objc fileprivate func me_muukii_setNeedsDisplay() {

@@ -24,14 +24,7 @@ import UIKit
 
 extension UIView {
 
-  override open static func initialize() {
-    if !didUIViewControllerInitialize {
-      replaceMethods()
-      didUIViewControllerInitialize = true
-    }
-  }
-
-  fileprivate static func replaceMethods() {
+  static func replaceMethods() {
 
     method_exchangeImplementations(
       class_getInstanceMethod(self, #selector(setNeedsLayout)),

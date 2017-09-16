@@ -24,14 +24,7 @@ import UIKit
 
 extension UIViewController {
 
-  override open static func initialize() {
-    if !didUIViewControllerInitialize {
-      replaceMethods()
-      didUIViewControllerInitialize = true
-    }
-  }
-
-  fileprivate static func replaceMethods() {
+  static func replaceMethods() {
 
     method_exchangeImplementations(
       class_getInstanceMethod(self, #selector(UIViewController.viewDidLoad)),
@@ -78,8 +71,5 @@ extension UIViewController {
     ApplicationMonitor.viewControllerMonitorReport?.viewDidDisappear(on: self)
     self.me_muukii_transition_monitor_viewDidDisappear(animated)
   }
-
-  @nonobjc
-  private static var didUIViewControllerInitialize: Bool = false
 }
 

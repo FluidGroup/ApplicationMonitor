@@ -41,11 +41,21 @@ public protocol ViewMonitorReportProtocol {
 
 public enum ApplicationMonitor {
 
+  private static let viewControllerSwizzle: Void = {
+    UIViewController.replaceMethods()
+  }()
+
+  private static let viewSwizzle: Void = {
+    UIView.replaceMethods()
+  }()
+
   public static func setViewControllerMonitorReport(_ object: ViewControllerMonitorReportProtocol) {
+    _ = viewControllerSwizzle
     viewControllerMonitorReport = object
   }
 
   public static func setViewMonitorReport(_ object: ViewMonitorReportProtocol) {
+    _ = viewSwizzle
     viewMonitorReport = object
   }
 

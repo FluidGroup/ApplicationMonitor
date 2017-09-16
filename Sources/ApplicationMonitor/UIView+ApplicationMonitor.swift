@@ -27,8 +27,8 @@ extension UIView {
   static func replaceMethods() {
 
     method_exchangeImplementations(
-      class_getInstanceMethod(self, #selector(setNeedsLayout)),
-      class_getInstanceMethod(self, #selector(me_muukii_setNeedsLayout))
+      class_getInstanceMethod(self, #selector(setNeedsLayout))!,
+      class_getInstanceMethod(self, #selector(me_muukii_setNeedsLayout))!
     )
 
 //    method_exchangeImplementations(
@@ -42,7 +42,7 @@ extension UIView {
 //    )
   }
 
-  @objc fileprivate func me_muukii_setNeedsLayout() {
+  @objc dynamic fileprivate func me_muukii_setNeedsLayout() {
     ApplicationMonitor.viewMonitorReport?.setNeedsLayout(on: self)
     self.me_muukii_setNeedsLayout()
   }

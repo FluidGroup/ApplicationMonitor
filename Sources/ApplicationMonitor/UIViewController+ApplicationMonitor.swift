@@ -27,47 +27,52 @@ extension UIViewController {
   static func replaceMethods() {
 
     method_exchangeImplementations(
-      class_getInstanceMethod(self, #selector(UIViewController.viewDidLoad)),
-      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewDidLoad)))
+      class_getInstanceMethod(self, #selector(UIViewController.viewDidLoad))!,
+      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewDidLoad))!
+    )
 
     method_exchangeImplementations(
-      class_getInstanceMethod(self, #selector(UIViewController.viewWillAppear(_:))),
-      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewWillAppear(_:))))
+      class_getInstanceMethod(self, #selector(UIViewController.viewWillAppear(_:)))!,
+      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewWillAppear(_:)))!
+    )
 
     method_exchangeImplementations(
-      class_getInstanceMethod(self, #selector(UIViewController.viewDidAppear(_:))),
-      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewDidAppear(_:))))
+      class_getInstanceMethod(self, #selector(UIViewController.viewDidAppear(_:)))!,
+      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewDidAppear(_:)))!
+    )
 
     method_exchangeImplementations(
-      class_getInstanceMethod(self, #selector(UIViewController.viewWillDisappear(_:))),
-      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewWillDisappear(_:))))
+      class_getInstanceMethod(self, #selector(UIViewController.viewWillDisappear(_:)))!,
+      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewWillDisappear(_:)))!
+    )
 
     method_exchangeImplementations(
-      class_getInstanceMethod(self, #selector(UIViewController.viewDidDisappear(_:))),
-      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewDidDisappear(_:))))
+      class_getInstanceMethod(self, #selector(UIViewController.viewDidDisappear(_:)))!,
+      class_getInstanceMethod(self, #selector(UIViewController.me_muukii_transition_monitor_viewDidDisappear(_:)))!
+    )
   }
 
-  @objc fileprivate func me_muukii_transition_monitor_viewDidLoad() {
+  @objc dynamic fileprivate func me_muukii_transition_monitor_viewDidLoad() {
     ApplicationMonitor.viewControllerMonitorReport?.viewDidLoad(on: self)
     self.me_muukii_transition_monitor_viewDidLoad()
   }
 
-  @objc fileprivate func me_muukii_transition_monitor_viewWillAppear(_ animated: Bool) {
+  @objc dynamic fileprivate func me_muukii_transition_monitor_viewWillAppear(_ animated: Bool) {
     ApplicationMonitor.viewControllerMonitorReport?.viewWillAppear(on: self)
     self.me_muukii_transition_monitor_viewWillAppear(animated)
   }
 
-  @objc fileprivate func me_muukii_transition_monitor_viewDidAppear(_ animated: Bool) {
+  @objc dynamic fileprivate func me_muukii_transition_monitor_viewDidAppear(_ animated: Bool) {
     ApplicationMonitor.viewControllerMonitorReport?.viewDidAppear(on: self)
     self.me_muukii_transition_monitor_viewDidAppear(animated)
   }
 
-  @objc fileprivate func me_muukii_transition_monitor_viewWillDisappear(_ animated: Bool) {
+  @objc dynamic fileprivate func me_muukii_transition_monitor_viewWillDisappear(_ animated: Bool) {
     ApplicationMonitor.viewControllerMonitorReport?.viewWillDisappear(on: self)
     self.me_muukii_transition_monitor_viewWillDisappear(animated)
   }
 
-  @objc fileprivate func me_muukii_transition_monitor_viewDidDisappear(_ animated: Bool) {
+  @objc dynamic fileprivate func me_muukii_transition_monitor_viewDidDisappear(_ animated: Bool) {
     ApplicationMonitor.viewControllerMonitorReport?.viewDidDisappear(on: self)
     self.me_muukii_transition_monitor_viewDidDisappear(animated)
   }

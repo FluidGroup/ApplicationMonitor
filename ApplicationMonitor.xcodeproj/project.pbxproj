@@ -10,7 +10,6 @@
 		4B7504261E6675BA0000D20F /* UIView+ApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7504251E6675BA0000D20F /* UIView+ApplicationMonitor.swift */; };
 		4BDA995F1D831EEA00E5C775 /* ApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDA995C1D831EEA00E5C775 /* ApplicationMonitor.swift */; };
 		4BDA99601D831EEA00E5C775 /* UIViewController+ApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDA995D1D831EEA00E5C775 /* UIViewController+ApplicationMonitor.swift */; };
-		4BDA99621D831F6E00E5C775 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BDA99611D831F6E00E5C775 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,7 +135,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BDA99621D831F6E00E5C775 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

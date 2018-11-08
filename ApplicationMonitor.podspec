@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ApplicationMonitor'
-  s.version          = '0.3.2'
+  s.version          = '0.4.1'
   s.summary          = 'Monitor life-cycle for UI (use method swizzling)'
   s.homepage         = 'https://github.com/muukii/ApplicationMonitor'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
